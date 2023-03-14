@@ -1,0 +1,261 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(144, 191, 42);
+  background: linear-gradient(
+    349deg,
+    rgba(144, 191, 42, 1) 0%,
+    rgba(234, 224, 224, 1) 42%,
+    rgba(144, 191, 42, 1) 100%
+  );
+  padding: 1.4rem 1.1rem;
+  position: fixed;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  margin-right: 4rem;
+}
+
+.logo img {
+  height: 70px;
+  width: 82.56px;
+}
+
+.navbar-links_container *,
+.header-navbar-sign a {
+  color: rgb(31, 26, 26);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.navdrop_link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+.nav-list:last-child > a {
+  color: #90bf2a;
+}
+
+.nav-item {
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+.nav-item > a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: rgb(51, 49, 49);
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  padding: 1rem 0rem;
+  background-color: #c4c4c4;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  z-index: 10;
+  width: 15rem;
+  min-height: 10rem;
+}
+
+.dropdown-menu li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 3px;
+  border-bottom: 1px solid rgba(67, 61, 61, 0.4);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+  background-color: #90bf2a;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-mobile {
+  display: none;
+}
+
+.header-navbar-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-navbar-menu {
+  position: relative;
+  display: none;
+}
+
+.header-navbar-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  padding: 1.5rem 0rem;
+  min-width: 250px;
+  margin-top: 1rem;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  border-radius: 6px;
+  align-items: flex-end;
+  text-align: end;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-navbar-menu-container-links {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.header-navbar-menu-container-links > li {
+  display: flex;
+  background-color: #ccc;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 0;
+  padding: 0.7rem 0.5rem;
+  border-radius: 3px;
+  outline: none;
+}
+
+.header-navbar-menu-container-sign-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.header-navbar-menu-container-sign-mobile > .login-register {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  background-color: #90bf2a;
+  padding: 1rem 0.5rem;
+  border-radius: 3px;
+}
+
+.header-navbar-menu-container-sign-mobile .login-register > a {
+  color: white;
+}
+
+.header-navbar-menu svg {
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 0.1rem;
+}
+
+.cart-badge {
+  width: 15px;
+  height: 15px;
+  background-color: #90bf2a;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-left: -7px;
+}
+
+.cart > a {
+  display: flex;
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    padding: 0.8rem 0.6rem;
+  }
+  .header-navbar-menu {
+    display: flex;
+  }
+
+  .navbar-links_container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 0.6rem 0.4rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header {
+    padding: 0.4rem 0.2rem;
+  }
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .header-navbar-menu-container-sign {
+    display: none;
+  }
+
+  .header-navbar-menu-container-sign-mobile > .login-register {
+    display: flex;
+  }
+}
