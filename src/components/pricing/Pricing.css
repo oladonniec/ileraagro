@@ -17,7 +17,6 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 500px;
-  max-height: 600px;
 }
 
 .pricing__title {
