@@ -2,6 +2,9 @@ import React from "react";
 import "./Testimonials.css";
 
 const Testimonials = () => {
+  const testimonialImg =
+    process.env.PUBLIC_URL + "./assets/testimonialimage.jpg";
+
   return (
     <div className="testimonials-container">
       <h2 className="testimonials-heading">What Our Customers Say</h2>
@@ -17,7 +20,7 @@ const Testimonials = () => {
           </div>
           <div className="testimonial-info">
             <img
-              src="https://via.placeholder.com/150"
+              src={testimonialImg}
               alt="testimonial"
               className="testimonial-image"
             />
@@ -38,7 +41,28 @@ const Testimonials = () => {
           </div>
           <div className="testimonial-info">
             <img
-              src="https://via.placeholder.com/150"
+              src={testimonialImg}
+              alt="testimonial"
+              className="testimonial-image"
+            />
+            <div className="testimonial-name">
+              <p className="name-text">Jane Smith</p>
+              <p className="name-position">Agricultural Scientist</p>
+            </div>
+          </div>
+        </div>
+        <div className="testimonial-card">
+          <div className="testimonial-quote">
+            <span className="quote-mark">&#8220;</span>
+            <p className="quote-text">
+              I have recommended Ilera Agro to many of my friends and colleagues
+              and they have all been very happy with the quality of the products
+              and services they offer.
+            </p>
+          </div>
+          <div className="testimonial-info">
+            <img
+              src={testimonialImg}
               alt="testimonial"
               className="testimonial-image"
             />

@@ -22,7 +22,7 @@ const HeroSection = () => {
         <SwiperSlide className="hero-slide">
           <img src={Afrovita} alt="Slider 1" className="hero-img" />
           <div className="hero-content">
-            <h1>AfroVita Maize Flour</h1>
+            <h1 className="glow">AfroVita Maize Flour</h1>
             <p>
               We are committed to providing fresh, high quality and sustainably
               grown produce to our customers.
@@ -40,7 +40,7 @@ const HeroSection = () => {
         <SwiperSlide className="hero-slide">
           <img src={JumboChocalate} alt="Slider 2" className="hero-img" />
           <div className="hero-content">
-            <h1>Jumbo Chocolate Flavoured Sticks</h1>
+            <h1 className="glow">Jumbo Chocolate Flavoured Sticks</h1>
             <p>
               Discover our wide range of fresh and organically grown produce.
             </p>
@@ -57,7 +57,7 @@ const HeroSection = () => {
         <SwiperSlide className="hero-slide">
           <img src={WowSticks} alt="Slider 3" className="hero-img" />
           <div className="hero-content">
-            <h1>WOWSTICKS Corn Snacks</h1>
+            <h1 className="glow">WOWSTICKS Corn Snacks</h1>
             <p>
               Connect with like-minded individuals and stay up to date with our
               latest events and activities.

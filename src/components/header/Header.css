@@ -140,18 +140,22 @@
 .header-navbar-menu-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: black;
-  padding: 1.5rem 0rem;
+  padding: 1.5rem 1rem;
   min-width: 250px;
   margin-top: 1rem;
   position: absolute;
   right: 0;
-  top: 60px;
+  width: 100vw;
+  height: 100vh;
+  top: 40px;
   border-radius: 6px;
-  align-items: flex-end;
+  align-items: flex-start;
   text-align: end;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: all 0.5s ease;
 }
 
 .header-navbar-menu-container-links {

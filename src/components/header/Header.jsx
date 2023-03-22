@@ -20,7 +20,7 @@ function Header() {
               <a href="#">Home</a>
             </li>
             <li className="nav-item">
-              <a href="#">Products Gallery</a>
+              <a href="#productsGallery">Products Gallery</a>
             </li>
             <li className="nav-item dropdown">
               <a href="#" className="navdrop_link">
@@ -89,19 +89,25 @@ function Header() {
         {toggleMenu && (
           <div className="header-navbar-menu-container scale-up-center">
             <ul className="header-navbar-menu-container-links">
-              <li className="nav-item">
+              <li className="nav-item" onClick={() => setToggleMenu(false)}>
                 <a href="#">Home</a>
               </li>
-              <li className="nav-item">
-                <a href="#">Products Gallery</a>
+              <li className="nav-item" onClick={() => setToggleMenu(false)}>
+                <a href="#productsGallery">Products Gallery</a>
               </li>
-              <li className="nav-item dropdown-mobile">
+              <li
+                className="nav-item dropdown-mobile"
+                onClick={() => setToggleMenu(false)}
+              >
                 <a href="#" className="navdrop_link">
                   <span>Our Company</span>
                   <IoIosArrowDropdownCircle />
                 </a>
               </li>
-              <li className="nav-item dropdown-mobile">
+              <li
+                className="nav-item dropdown-mobile"
+                onClick={() => setToggleMenu(false)}
+              >
                 <a href="#" className="navdrop_link">
                   ILERA Divisions
                   <IoIosArrowDropdownCircle />

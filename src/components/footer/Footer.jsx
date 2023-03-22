@@ -1,67 +1,57 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
+import FooterOverlay from "./FooterOverlay";
 import "./Footer.css";
+import Newsletter from "./Newsletter";
 
-const Footer = () => {
-  const logoUrl = process.env.PUBLIC_URL + "/Ilera_Agro_Logo.png";
-  return (
-    <footer>
-      <div className="footer-container">
-        <div className="footer-logo">
-          <img src={logoUrl} alt="ILERA Agro" />
-          <p>ILERA Agro</p>
-        </div>
-        <div className="footer-links">
-          <h3>Links</h3>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Products Gallery</a>
-            </li>
-            <li>
-              <a href="#">Our Company</a>
-            </li>
-            <li>
-              <a href="#">ILERA Divisions</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-contact">
-          <h3>Contact Us</h3>
-          <p>123 Main Street, Anytown USA 12345</p>
-          <p>(123) 456-7890</p>
-          <p>info@ileraagro.com</p>
-        </div>
-        <div className="footer-social">
-          <h3>Follow Us</h3>
-          <div className="social-icons">
-            <a href="#">
-              <FaFacebookF />
-            </a>
-            <a href="#">
-              <FaTwitter />
-            </a>
-            <a href="#">
-              <FaInstagram />
-            </a>
-            <a href="#">
-              <FaLinkedin />
-            </a>
-          </div>
+const logoUrl = process.env.PUBLIC_URL + "/Ilera_Agro_Logo.png";
+
+const Footer = () => (
+  <div className="app__footer section__padding" id="login">
+    <FooterOverlay />
+    <Newsletter />
+
+    <div className="app__footer-links">
+      <div className="app__footer-links_contact">
+        <h1 className="app__footer-headtext">Contact Us</h1>
+        <p className="p__opensans">Sharada Industrial Esate Phase 1 Kano </p>
+        <p className="p__opensans">+1 212-344-1230</p>
+        <p className="p__opensans">+1 212-555-1230</p>
+      </div>
+
+      <div className="app__footer-links_logo">
+        <a href="#home">
+          <h1>Ilera Agro</h1>
+        </a>
+        <p className="p__opensans">
+          &quot;The best way to find yourself is to lose yourself in the service
+          of others.&quot;
+        </p>
+        <img
+          src={logoUrl}
+          className="spoon__img"
+          style={{ marginTop: 15 }}
+          alt="Logo"
+        />
+        <div className="app__footer-links_icons">
+          <FiFacebook />
+          <FiTwitter />
+          <FiInstagram />
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>© 2023 ILERA Agro. All rights reserved.</p>
+
+      <div className="app__footer-links_work">
+        <h1 className="app__footer-headtext">Working Hours</h1>
+        <p className="p__opensans">Monday-Friday:</p>
+        <p className="p__opensans">08:00 am - 12:00 am</p>
+        <p className="p__opensans">Saturday-Sunday:</p>
+        <p className="p__opensans">07:00 am - 11:00 pm</p>
       </div>
-    </footer>
-  );
-};
+    </div>
+    <div className="footer__copyright">
+      <p className="p__opensans">2023 Ilera Agro. All Rights reserved.</p>
+    </div>
+  </div>
+);
 
 export default Footer;

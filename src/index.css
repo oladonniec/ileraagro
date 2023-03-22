@@ -1,22 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
   --card-height: 400px;
-  --card-width: calc(var(--card-height) / 1.5);
+  --card-min-width: 290px;
+  --card-max-width: 400px;
   --font-family: "Manrope", sans-serif;
+  --font-base: "Cormorant Upright", serif;
+  --font-alt: "Open Sans", sans-serif;
+
+  --color-golden: #dcca87;
+  --color-black: #0c0c0c;
+  --color-gray: #545454;
+  --color-crimson: #f5efdb;
+  --color-grey: #aaaaaa;
+  --color-white: #ffffff;
 }
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
-  transition: 500ms all ease;
+  transition: 0.3s all ease-in-out;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(92, 184, 92, 0.3) 30%,
+    rgba(255, 255, 255, 1) 69%,
+    rgba(92, 184, 92, 0.3) 100%
+  );
 }
 
 ul {
@@ -26,4 +46,14 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.p__opensans {
+  font-family: var(--font-alt);
+  color: var(--color-black);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
 }

@@ -1,14 +1,14 @@
 .products-container {
   margin: 50px auto;
-  max-width: 1200px;
   text-align: center;
+  max-width: 1300px;
+  padding: 0px 20px;
 }
 
 .products-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
 }
 
 .products-header h2 {
@@ -51,7 +51,7 @@
 }
 
 .card {
-  width: var(--card-width);
+  min-width: var(--card-min-width);
   height: var(--card-height);
   position: relative;
   display: flex;
@@ -121,14 +121,60 @@
 .card:hover .wrapper::after {
   height: 120px;
 }
+
 .title {
   width: 100%;
   transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(11, 11, 11, 0.6);
+  border-radius: 5px;
+  padding: 2px 0.5rem;
+}
+
+.title .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title .info span {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.title h3 {
+  font-family: var(--font-family);
+  padding: 1rem;
+  color: #f6f4f8;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.title button {
+  padding: 1rem;
+  background-color: #5cb85c;
+  border: 1px solid #c4c4c4;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
 }
 .card:hover .title {
   transform: translate3d(0%, -50px, 100px);
+  background-color: rgba(11, 11, 11, 0.6);
 }
 
+.card:hover .title button {
+  display: block;
+  opacity: 1;
+}
+.card:hover .title h3 {
+  font-weight: 700;
+  color: #fff;
+}
 .character {
   width: 100%;
   opacity: 0;
@@ -144,8 +190,118 @@
 
 .swiSliderCardsContainer {
   display: flex;
-  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.swiper .swiper-slide {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.swiper-wrapper > * {
+  margin: 0px;
+}
+
+@media screen and (max-width: 1140px) {
+  .swiper-button-next {
+    right: -20px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .nav-tabs {
+    gap: 2rem;
+  }
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, -10px);
+  }
+
+  .products-container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-tabs {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .card .title {
+    transform: translate3d(0%, -50px, 100px);
+    background-color: rgba(11, 11, 11, 0.6);
+  }
+
+  .card .title button {
+    display: block;
+    opacity: 1;
+  }
+  .card .title h3 {
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .nav-tabs {
+    gap: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-tab {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 696px) {
+  .nav-tabs {
+    gap: 0.8rem;
+  }
+
+  .nav-tab {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .nav-tabs {
+    gap: 0.7rem;
+    font-weight: 600;
+    padding: 0;
+  }
+
+  .nav-tab {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-tabs {
+    gap: 0.5rem;
+    font-weight: 600;
+  }
+
+  .nav-tab {
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .nav-tabs {
+    gap: 0.02rem;
+    font-weight: 400;
+  }
+
+  .nav-tab {
+    padding: 5px;
+    font-size: 4px;
+  }
 }
