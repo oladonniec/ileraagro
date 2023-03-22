@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ileraagro/static/css/main.c33dcd22.css",
+    "main.js": "/ileraagro/static/js/main.95160fa0.js",
+    "index.html": "/ileraagro/index.html",
+    "main.c33dcd22.css.map": "/ileraagro/static/css/main.c33dcd22.css.map",
+    "main.95160fa0.js.map": "/ileraagro/static/js/main.95160fa0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c33dcd22.css",
+    "static/js/main.95160fa0.js"
+  ]
+}
